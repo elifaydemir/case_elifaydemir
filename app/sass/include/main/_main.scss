@@ -1,0 +1,286 @@
+.main-container{
+  padding-left: 64px;
+  padding-top: 42px;
+  padding-bottom: 183px;
+  .alert-success-box{
+    display: flex;
+    flex-direction: column;
+    span.alert-text{
+      padding: 24px;
+      background: #EAFFFB;
+      border: 1px solid #007B65;
+      border-radius: 8px;
+      display: inline-flex;
+      justify-content: space-between;
+      color: #007B65;
+    }
+    button{
+      background: transparent;
+      color: #007B65;
+    }
+  }
+  .alert-warning-box{
+    display: flex;
+    flex-direction: column;
+    span.alert-text{
+      padding: 24px;
+      background: #FDEFEF;
+      border: 1px solid #A40000;
+      border-radius: 8px;
+      display: inline-flex;
+      justify-content: space-between;
+      color: #A40000;
+    }
+    button{
+      background: transparent;
+      color: #A40000;
+    }
+  }
+  .title{
+    h1{
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--baseColor);
+      margin-bottom: 20px;
+    }
+    span{
+      display: block;
+      font-weight: 400;
+      font-size: 24px;
+      color: var(--baseColor);
+      margin-bottom: 30px;
+    }
+  }
+  .flight-status{
+    .flight-information{
+      width: 568px;
+      padding: 40px;
+      background: var(--white);
+      @include radius(12px);
+      border: 1px solid rgba(80, 93, 104, 0.2);
+      box-shadow: 0px 2px 4px rgba(7, 4, 146, 0.1), 0px 24px 60px rgba(6, 47, 125, 0.05), 0px 12px 24px rgba(27, 59, 119, 0.05);
+      h3{
+        display: block;
+        margin-bottom: 12px;
+        font-weight: 700;
+        font-size: 24px;
+        color: var(--baseColor);
+      }
+      span.text{
+        display: block;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: var(--baseColor);
+        margin-bottom: 24px;
+      }
+      .form-group{
+        margin-bottom: 12px;
+        button{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 14px;
+          width: 100%;
+          @include radius(4px);
+          background: #605DEC;
+          color: var(--white);
+          @include animates(var(--animate));
+          &:hover{
+            background: var(--purple);
+          }
+        }
+        input{
+          background: var(--white);
+          border: 1px solid rgba(80, 93, 104, 0.2);
+          border-radius: 4px;
+          width: 100%;
+          padding: 13px 12px;
+          color: var(--baseColor);
+          @include placeholder(var(--baseColor));
+          font-size: 18px;
+          font-weight: 400;
+          &.active{
+            border:2px solid #A40000;
+            background: #FDEFEF;
+          }
+        }
+        span{
+          &.danger{
+            font-size: 12px;
+            color: #A40000;
+            margin-top: 6px;
+            display: block;
+          }
+        }
+      }
+    }
+    .flight-operations{
+      padding: 16px;
+      background: var(--white);
+      @include radius(8px);
+      border: 1px solid var(--boxBorderColor);
+      .box{
+        button{
+          width: 100%;
+          background: transparent;
+          border-bottom: 1px solid #E9E8FC;
+          &:last-child{
+            border-bottom: none;
+          }
+          .box-content{
+            display: flex;
+            justify-content: space-between;
+            @include animates(var(--animate));
+            padding: 16px;
+            margin-bottom: 4px;
+            margin-top: 4px;
+            border: 1px solid transparent;
+            &:hover{
+              background: #F6F6FE;
+              border-color:#605DEC;
+              @include radius(8px);
+            }
+            .box-image{
+
+            }
+            .box-title{
+              width: 157px;
+              span{
+                text-align: left;
+                &.duration-time{
+                  display: block;
+                  font-size: 16px;
+                  font-weight: 400;
+                  color: var(--black);
+                  margin-bottom: 4px;
+                }
+                &.airline{
+                  color: var(--baseColor);
+                }
+              }
+            }
+            .box-time{
+              width: 157px;
+              span{
+                display: block;
+                font-size: 16px;
+                font-weight: 400;
+                color: var(--black);
+              }
+            }
+            .box-stop{
+              width: 157px;
+              span{
+                text-align: right;
+                &.non-stop{
+                  display: block;
+                  font-size: 16px;
+                  font-weight: 400;
+                  color: var(--black);
+                  margin-bottom: 4px;
+                }
+                &.stop-details{
+                  display: block;
+                  color: var(--baseColor);
+                }
+              }
+            }
+            .box-price{
+              width: 157px;
+              span{
+                text-align: right;
+                &.price-details{
+                  display: block;
+                  font-size: 16px;
+                  font-weight: 400;
+                  color: var(--black);
+                  margin-bottom: 4px;
+                }
+                &.price-trip-type{
+                  display: block;
+                  color: var(--baseColor);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .flight-status-airplane{
+      padding: 24px 17px;
+      background: var(--white);
+      border: 1px solid #E9E8FC;
+      @include radius(12px);
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      .airplane-image{
+        margin-bottom: 16px;
+      }
+      .airplane-title{
+        h2{
+          display: block;
+          font-size: 16px;
+          font-weight: 400;
+          color: var(--black);
+          margin-bottom: 4px;
+        }
+        span{
+          display: block;
+          font-size: 16px;
+          font-weight: 400;
+          color: #605DEC;
+          margin-bottom: 16px;
+        }
+      }
+      .airplane-time{
+        h2{
+          display: block;
+          font-size: 16px;
+          font-weight: 400;
+          color: var(--black);
+          margin-bottom: 8px;
+        }
+        span{
+          display: block;
+          margin-bottom: 8px;
+        }
+      }
+    }
+    .taxes-fee{
+      margin-top: 24px;
+      text-align: right;
+      padding-right: 15px;
+      button{
+        margin-top: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: right;
+        background: #605DEC;
+        padding: 14px 20px;
+        @include radius(4px);
+        color: var(--white);
+        @include animates(var(--animate));
+        &:hover{
+          background: var(--purple);
+        }
+      }
+      ul{
+        li{
+          margin-bottom: 8px;
+          span{
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 4px;
+            &.title{
+              margin-right: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

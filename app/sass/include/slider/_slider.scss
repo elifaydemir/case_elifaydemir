@@ -1,0 +1,60 @@
+.wrapper{
+  height: 100%;
+  display: block;
+  position: fixed;
+  background-color: #fff;
+  width: auto;
+  left: 0;
+  right: 0;
+  padding-top: 80px;
+  transform: translateX(60%);
+  transition: transform 600ms cubic-bezier(0.53, 1, 0.55, 1.01) 0s;
+  top: 0;
+  .logo{
+    position: absolute;
+    top: 11px;
+  }
+  .slider-wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 24px;
+    padding-top: 42px;
+    ul {
+      li {
+        padding-bottom: 32px;
+
+        a {
+          text-transform: uppercase;
+          font-size: 14px;
+          line-height: 19px;
+          color: var(--baseColor);
+        }
+      }
+    }
+  .book-slider{
+    button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      border: 1px solid var(--borderColor);
+      padding: 13px 42px;
+      @include radius(4px);
+      color: var(--borderColor);
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 400;
+      @include animates(var(--animate));
+      margin: 32px 45px;
+      &:hover{
+        background: var(--purple);
+        color: var(--white);
+      }
+    }
+  }
+  }
+}

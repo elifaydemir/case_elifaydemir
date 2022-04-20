@@ -1,0 +1,65 @@
+.header{
+  height: 112px;
+  .header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    .logo{
+      a{
+        display: block;
+      }
+    }
+    .menu{
+      ul{
+        display: flex;
+        li{
+          a{
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-right: 48px;
+            color: var(--baseColor);
+            @include animates(var(--animate));
+            &:hover{
+              color: var(--purple);
+            }
+          }
+          &:last-child{
+            a{
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .book-now{
+      button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        border: 1px solid var(--borderColor);
+        padding: 13px 42px;
+        @include radius(4px);
+        color: var(--borderColor);
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 400;
+        @include animates(var(--animate));
+        &:hover{
+          background: var(--purple);
+          color: var(--white);
+        }
+      }
+    }
+    .slider{
+      position: relative;
+      z-index: 1;
+    }
+    .mobile-menu{
+      display: none;
+    }
+  }
+}

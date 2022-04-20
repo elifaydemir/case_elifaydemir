@@ -1,0 +1,43 @@
+
+//I have defined the css operations that are used separately in all browsers as variables with the help of mixin.
+@mixin radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin animates($ms) {
+    -webkit-transition: $ms all;
+    -moz-transition: $ms all;
+    -ms-transition: $ms all;
+    -o-transition: $ms all;
+    transition: $ms all;
+}
+@mixin rotate($rotate){
+    -ms-transform: rotate($rotate);
+    -moz-transform: rotate($rotate);
+    -webkit-transform: rotate($rotate);
+    transform: rotate($rotate);
+}
+@mixin apperance($type){
+    -webkit-appearance: $type;
+    -moz-appearance:    $type;
+    appearance:         $type;
+}
+@mixin placeholder($color) {
+    &::-webkit-input-placeholder {
+        @include animates(500ms);
+        color: $color;
+    }
+    &:-moz-placeholder {
+        @include animates(500ms);
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        @include animates(500ms);
+        color: $color;
+    }
+    &::-moz-placeholder {
+        @include animates(500ms);
+        color: $color;
+    }
+}

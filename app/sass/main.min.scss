@@ -1,0 +1,172 @@
+@import 'mixins';
+@import 'colors';
+@import 'reset';
+@import 'fontawesome';
+body{
+  font-size: 1em;
+  line-height: 1;
+  font-family: 'Roboto', sans-serif;
+  background: var(--backgroundColor);
+}
+//I have defined the css operations that I will use frequently as variables.
+.pl-0{
+  padding-left: 0 !important;
+}
+.purple{
+  color: var(--purple);
+}
+.dark-purple{
+  color: #605DEC;
+}
+.pr-0 {
+  padding-right: 0 !important;
+}
+.ml-0 {
+  margin-left: 0 !important;
+}
+.mr-0 {
+  margin-right: 0 !important;
+}
+.hidden{
+  display: none;
+  visibility: hidden;
+}
+.show{
+  display: block;
+  visibility: visible;
+  z-index: 99999;
+}
+.hamburger-react{
+  z-index: 99999;
+}
+//I created a separate scss file for each component I used and imported them here.
+@import 'include/header/header';
+@import 'include/main/main';
+@import 'include/footer/footer';
+@import 'include/slider/slider';
+
+//css codes for responsive operation
+@media only screen and (min-width: 100px) and (max-width: 960px){
+  .header{
+    background: var(--white);
+    height: 100px;
+    .header-container{
+      .menu{
+        display: none;
+      }
+      .book-now{
+        display: none;
+      }
+      .mobile-menu{
+        display: block;
+        padding-right: 30px;
+        button{
+          font-size: 1.4em;
+          color: var(--purple);
+        }
+      }
+    }
+  }
+  .main-container{
+    padding: 24px 15px;
+    .title{
+      h1{
+        font-size: 36px;
+      }
+      span{
+        font-size: 14px;
+      }
+    }
+    .flight-status{
+      .flight-information{
+        width: auto;
+        margin-bottom: 16px;
+        padding: 16px;
+      }
+      .col-12{
+        padding-right: 0;
+      }
+      .col-md-3{
+        padding-left: 0;
+      }
+      .flight-status-airplane{
+        text-align: center;
+      }
+      .flight-operations{
+        background: transparent;
+        padding: 0;
+        .box{
+          background: var(--white);
+          margin-bottom: 16px;
+          @include radius(4px);
+          button{
+            .box-content{
+              justify-content: space-around;
+              flex-wrap: wrap;
+              .box-image{
+                order: 1;
+              }
+              .box-title{
+                order: 2;
+                width: auto;
+              }
+              .box-time{
+                width: auto;
+                order: 4;
+              }
+              .box-stop{
+                width: auto;
+                order: 5;
+              }
+              .box-price{
+                order: 3;
+                width: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer{
+    height: auto;
+    .sm-contact{
+      display: none;
+    }
+    .footer-top{
+      .col-md-2{
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        border-right: none;
+        h2{
+          display: none;
+        }
+        ul{
+          li{
+            a{
+              display: block;
+              text-align: center;
+              margin-bottom: 47px;
+              color: var(--baseColor);
+              text-transform: uppercase;
+            }
+            &:last-child{
+              display: block;
+            }
+          }
+        }
+      }
+      .col-md-4{
+        padding-right: 0;
+        border-bottom: 1px solid #C2D1D9;
+        padding-bottom: 48px;
+        &:after{
+          display: none;
+        }
+      }
+    }
+    .footer-bottom{
+      display: none;
+    }
+  }
+}
