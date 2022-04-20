@@ -1,15 +1,15 @@
 # Project Steps 
 
 
-##to run sass
+# to run sass
 
-# sass --watch app/sass:public/css --style compressed
+ sass --watch app/sass:public/css --style compressed
 
-##to download node packages when the project first opens
+# to download node packages when the project first opens
 
-# npm install
+ npm install
 
-##to run the project  
-# npm run dev
+# to run the project  
+ npm run dev
 
 # visit the online project -> https://case-elif-aydemir.vercel.app/
