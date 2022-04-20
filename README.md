@@ -1,4 +1,4 @@
-#Project Steps 
+# Project Steps 
 
 
 ##to run sass
